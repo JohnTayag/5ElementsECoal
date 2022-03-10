@@ -61,13 +61,13 @@ function sendToken(req, res) {
 // sinon : retourner un code d'erreur au client
 function verify(req, res, next) {
     if (!req.headers || !req.headers.authorization) {
-        console.log('header non conforme :', req.headers);
+        console.log('header is not improper:', req.headers);
         res.status(401).end();
         return;
     }
     const auth = req.headers.authorization.split(' ');
     if (auth.length !== 2 || auth[0] !== 'Bearer') {
-        console.log('headers.authorization non conforme : ', auth);
+        console.log('headers.authorization not improper : ', auth);
         res.status(401).end();
         return;
     }

@@ -2,7 +2,7 @@ import {Route, Link, Routes} from "react-router-dom"
 import Home from "./home/Home";
 import Articles from "./articles/Articles";
 import './App.css'
-import Login, {ProtectedRoute} from "./Login/Login";
+import Login, {ProtectedRoute, NotProtectedLink} from "./Login/Login";
 
 function App() {
   return (
