@@ -12,7 +12,7 @@ function App() {
       <Link to="/articles">News</Link>
       <Link to="/Login">Login</Link>
     </nav>
-
+    <img src="5elements.png"></img>
       <Routes>
         <Route exact={true} path="/" element={<Home/>}/>
         <Route exact={true} path="/articles" element={<ProtectedRoute><Articles/></ProtectedRoute>}/>
