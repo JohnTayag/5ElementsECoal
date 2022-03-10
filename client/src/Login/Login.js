@@ -2,25 +2,27 @@ import React from 'react';
 import axios from "axios";
 import {Link} from 'react-router-dom';
 import {useCookies, withCookies} from 'react-cookie';
+import './Login.css'
 
 function FormLogin(props) {
     return (
+        <><h1 class="titre">Login In </h1>
         <form onSubmit={props.onSignin}>
-            <div>
-                <label>Username:</label>
-                <input type="text" id="username" autoComplete="off" ref={props.usernameRef}/>
+            <div class="email">
+                <label class="user">Username:</label>
+                <input class="user" type="text" id="username" autoComplete="off" ref={props.usernameRef} />
+            </div>
+            <div class="mdp">
+                <label class="pass">Password:</label>
+                <input class="pass" type="password" name="password" autoComplete="off" ref={props.passwordRef} />
             </div>
             <div>
-                <label>Password:</label>
-                <input type="password" name="password" autoComplete="off" ref={props.passwordRef}/>
-            </div>
-            <div>
-                <button type="submit" name="login">Login</button>
+                <button class="button" type="submit" name="login">Login</button>
                 <button type="button" name="signup" onClick={props.onSignup}>
                     Sign up
                 </button>
             </div>
-        </form>
+        </form></>
     );
 }
 
