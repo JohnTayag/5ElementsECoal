@@ -1,4 +1,99 @@
 .Home_title {
   color: #326273;
-  font-size: 4rem;
+    font-size: 2rem;
+    text-align: center;
+    word-break: break-word;
+    margin-top: 10vh;
+}
+.last_article img{
+  border: 1px solid rgba(193, 192, 197, 0.15);
+  box-sizing: border-box;
+  border-radius: 12px;
+  width: 90vw;
+}
+.last_article h1{
+  color: white;
+  position: absolute;
+  font-size: 1.3rem;
+  left: 7vw;
+  width: 50vw;
+  
+}
+.last_article_text{
+  word-wrap: break-word;
+}
+.last_article{
+  
+    text-align: center;
+}
+.last_article button{
+  position: absolute;
+    right: 10vw;
+    top: 27vh;
+    background: linear-gradient(#AC83FF , #884DFF );
+    color: white;
+    padding: 3vw;
+    border-radius: 10px;
+    border: none;
+}
+.first, .seconde,.third,.fourth {
+  max-width: 100%;
+  display: flex;
+  max-height: 100%;
+  height: 9vh;
+}
+.popular_arcticle h2{
+  font-size: 1rem;
+  color: white;
+  margin: auto;
+}
+.popular_arcticle img {
+  width: 20vw;
+  border-radius: 15px 0px 0px 15px;
+}
+.first{
+  background: linear-gradient(0.25turn ,#4BC19F , #FDFFAE );
+  display: flex;
+  flex-wrap: wrap;
+    flex-direction: row;
+    border-radius: 25px;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3vh;
+   
+}
+.seconde{
+  background: linear-gradient(0.25turn ,#F39200 , #972725 );
+  display: flex;
+  flex-wrap: wrap;
+    flex-direction: row;
+    border-radius: 25px;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3vh;
+   
+}
+.third{
+  background: linear-gradient(0.25turn ,#F3A7F4 , #6B2ECD);
+  display: flex;
+  flex-wrap: wrap;
+    flex-direction: row;
+    border-radius: 25px;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3vh;
+}
+.fourth{
+  background: linear-gradient(0.25turn ,#FF0303 , #FF8B49);
+  display: flex;
+  flex-wrap: wrap;
+    flex-direction: row;
+    border-radius: 25px;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3vh;
 }

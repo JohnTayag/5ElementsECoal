@@ -9,18 +9,13 @@ function FormLogin(props) {
         <><h1 class="titre">Login  </h1>
         <form onSubmit={props.onSignin}>
             <div class="email">
-                <label class="user">Username:</label>
-                <input class="user" type="text" id="username" autoComplete="off" ref={props.usernameRef} />
+                <input class="user" type="text"  placeholder='Username' id="username" autoComplete="off" ref={props.usernameRef} />
             </div>
             <div class="mdp">
-                <label class="pass">Password:</label>
-                <input class="pass" type="password" name="password" autoComplete="off" ref={props.passwordRef} />
+                <input class="pass" type="password" name="password" placeholder='PassWorld' autoComplete="off" ref={props.passwordRef} />
             </div>
             <div>
-                <button class="button" type="submit" name="login">Login</button>
-                <button type="button" name="signup" onClick={props.onSignup}>
-                    Sign up
-                </button>
+                <button class="button" type="submit" name="login"><span>Send</span></button>
             </div>
         </form></>
     );
