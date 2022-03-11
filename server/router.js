@@ -8,7 +8,7 @@ const verify=require('./connectionRouter').verify;
 
 router
     .get("/Articles", verify, (req, res) => {
-        db.all('select * from city',
+        db.all('select * from article',
             (err, rows) => {
                 if (err) {
                     console.log("err : ", err);
