@@ -5,6 +5,7 @@ import './App.css'
 import Login, {ProtectedRoute} from "./Login/Login";
 import Register from "./Register/register";
 import AddArticle from "./Components/AddArticle";
+import ProfilePage from "./ProfilePage/ProfilePage";
 
 
 
@@ -39,6 +40,7 @@ function App() {
     <li> <Link className="menuItem" onClick={toggleMenu} to="/Login">Login</Link></li>
     <li> <Link className="menuItem" onClick={toggleMenu} to="/Register">Register</Link></li>
     <li> <Link className="menuItem" onClick={toggleMenu} to="/AddArticle">AddArticle</Link></li>
+    <li> <Link className="menuItem" onClick={toggleMenu} to="/ProfilePage">Profile Page</Link></li>
       </ul>
       <button className="hamburger" onClick={toggleMenu}> 
         <i class="menuIcon material-icons">menu</i>
@@ -53,7 +55,8 @@ function App() {
         <Route path="*" element={() => <p>Page Not Found</p>} />
         <Route exact={true} path="/Login" element={<Login/>}/>
         <Route exact={true} path="/Register" element={<Register/>}/>
-        <Route exact={true} path="/AddArticle" element={<AddArticle/>}/>
+        <Route exact={true} path="/AddArticle" element={<AddArticle/>}/>~
+        <Route exact={true} path="/ProfilePage" element={<ProfilePage/>}/>
       </Routes>
     </>
 );
