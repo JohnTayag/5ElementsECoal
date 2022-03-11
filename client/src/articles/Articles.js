@@ -48,14 +48,14 @@ export default function Articles() {
     }
     return (
        <>
-<<<<<<< HEAD
+
         <h1>
             Articles !!
         </h1>
         
 =======
      
->>>>>>> 24c115c4d39c6e11b057ae535cdfdae51fd1a722
+
 
         <input 
                         type="text"
