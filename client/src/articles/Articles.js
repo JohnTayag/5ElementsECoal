@@ -41,11 +41,17 @@ export default function Articles() {
             }
         });
     }
+
+    function play(){
+      var audio = document.getElementById("audio");
+      audio.play();
+    }
     return (
        <>
         <h1>
             Articles !!
         </h1>
+        
 
         <input
                         type="text"
@@ -56,7 +62,7 @@ export default function Articles() {
           {data.map( x =>  <article key={x.id}>
                               <h1 className="Article_title">{x.title}</h1>
                               <section dangerouslySetInnerHTML={{__html: x.content}}></section>
-                              {displayMedia(x.mediaType,x.thumbnailURL)}
+                              {displayMedia(x.mediaType,x.thumbnailURL) }
                            </article>
            )}
       </>
