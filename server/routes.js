@@ -46,3 +46,11 @@ routes
                 })
             })
     })
+
+    .get(`/articles/:id`, (req, res) => 
+{
+    db.findById(req.params.id, (error, data) => 
+    {
+        res.json(data)
+    })
+})
