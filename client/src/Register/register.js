@@ -63,7 +63,7 @@ function Signup() {
     }
 
     if (cookies.login && cookies.login.token) {
-        return <button id="disconnect" onClick={disconnect}>disconnect</button>;
+        return <button  className="disconnect" id="disconnect" onClick={disconnect}>disconnect</button>;
     }
     return <FormSignup onSignup={onSignup} usernameRef={usernameRef} passwordRef={passwordRef} emailRef={emailRef} />
 }

@@ -15,10 +15,10 @@ export default function ProfilePage() {
         </h1>
         <div> <img src='/index1.jpg'/></div>
         <div classname="mt-1 mb-4 email" >
-        <input className="form-control user" placeholder='Alex' type="text" id="username"/>
+        <input className="form-control user" placeholder='Username' type="text" id="username"/>
         </div>
         <div classname="mt-1 mb-4 email" >
-        <input className="form-control user" placeholder='alex@gmail.com' type="text" id="email"/>
+        <input className="user" placeholder='User Email' type="text" id="email"/>
         </div>
         
         

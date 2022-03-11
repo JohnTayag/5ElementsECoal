@@ -109,3 +109,10 @@
     top: 69px;
     left: 104px;
 }
+.disconnect{
+    margin: 10vw 40vw;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 1vw;
+    padding: 1.5vw;
+}

@@ -1,9 +1,9 @@
 import React, {Component} from "react"
 import axios from "axios"
 import './AddArticle.css';
-
 export default class AddArticle extends Component
 {
+    
     constructor(props)
     {
         super(props)
@@ -70,10 +70,11 @@ export default class AddArticle extends Component
         })
     }
 
-
     render()
     {
+        
         return(
+            
             <div>
                 <h1 class="titre">AddArticle</h1>
                 <form>
@@ -131,6 +132,7 @@ export default class AddArticle extends Component
                 </form>
             </div>
         )
-
+        
     }
+    
 }

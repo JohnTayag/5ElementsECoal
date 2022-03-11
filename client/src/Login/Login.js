@@ -64,7 +64,7 @@ function Login() {
     }
 
     if (cookies.login && cookies.login.token) {
-        return <button id="disconnect" onClick={disconnect}>disconnect</button>;
+        return <button className="disconnect" id="disconnect" onClick={disconnect}>disconnect</button>;
     }
     return <FormLogin onSignin={onSignin} onSignup={onSignup} usernameRef={usernameRef} passwordRef={passwordRef}/>
 }
