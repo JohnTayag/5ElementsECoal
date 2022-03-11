@@ -3,7 +3,6 @@ import Home from "./home/Home";
 import Articles from "./articles/Articles";
 import './App.css'
 import Login, {ProtectedRoute} from "./Login/Login";
-
 import Register from "./Register/register";
 import AddArticle from "./Components/AddArticle";
 
