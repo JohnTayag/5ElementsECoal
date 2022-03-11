@@ -25,7 +25,7 @@ nav a {
   position: fixed;
   transform: translateY(-100%);
   transition: transform 0.2s;
-  top: -20vw;
+  top: -25vw;
   left: 0;
   right: 0;
   bottom: 0;
@@ -36,7 +36,7 @@ nav a {
   padding-top: 4rem;
   width: 50vw;
   box-shadow: 1px 1px black;
-  height: 47vh;
+  height: 60vh;
   width: 100%;
 }
 
