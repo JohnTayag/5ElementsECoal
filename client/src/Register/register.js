@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { useCookies, withCookies } from 'react-cookie';
 
 function FormSignup(props) {
+
+
     return (
         <div className='container border border-secondary mt-5 pt-3'>
             <form onSubmit={props.onSignup}>
@@ -32,20 +34,21 @@ function Signup() {
     const usernameRef = React.createRef();
     const passwordRef = React.createRef();
     const emailRef = React.createRef();
-    const profilePictureRef = React.createRef();
     function disconnect() {
         removeCookie('login');
     }
 
-    async function onSignup() {
+    async function onSignup(e) {
+        e.preventDefault();
+        console.log("error");
         const user = {
             username: usernameRef.current.value,
             password: passwordRef.current.value,
             email: emailRef.current.value,
-            profilePicture: profilePictureRef.current.value
 
         };
         try {
+            console.log("signup");
             const p = (await axios.post('http://localhost:8000/signup', user));
             if (p.status === 200) {
                 user.token = p.data.token;
@@ -59,7 +62,7 @@ function Signup() {
     if (cookies.login && cookies.login.token) {
         return <button id="disconnect" onClick={disconnect}>disconnect</button>;
     }
-    return <FormSignup onSignup={onSignup} usernameRef={usernameRef} passwordRef={passwordRef} emailRef={emailRef} profilePictureRef={profilePictureRef} />
+    return <FormSignup onSignup={onSignup} usernameRef={usernameRef} passwordRef={passwordRef} emailRef={emailRef} />
 }
 
 function LocalProtectedRoute({ children, ...rest }) {
