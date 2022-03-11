@@ -77,7 +77,7 @@ export default class AddArticle extends Component
                 <form>
                 <input type = "text"
                        name="title"
-                       placeholder="Add A New Article"
+                       placeholder="Add Title"
                        ref = {(input) => { this.inputToFocus = input }}
                        value={this.state.title} 
                        onChange={this.handleChange}
