@@ -22,7 +22,7 @@ function FormSignup(props) {
                     <input className="form-control user" placeholder='Email' type="email" name="email" required="on" ref={props.emailRef} />
                 </div>
                 <div className="mt-1 mb-4 text-center">
-                    <button className="btn btn-dark button" type="submit" name="signup">Sign Up</button>
+                    <button className="btn btn-dark button" type="submit" name="signup"><span>Sign Up</span></button>
                 </div>
             </form>
         </div>
@@ -94,3 +94,5 @@ const ProtectedLink = withCookies(LocalProtectedLink);
 
 export { ProtectedRoute, ProtectedLink };
 export default Signup;
+
+
