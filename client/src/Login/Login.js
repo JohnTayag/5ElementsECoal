@@ -14,7 +14,7 @@ function FormLogin(props) {
             <div class="mdp">
                 <input class="pass" type="password" name="password" placeholder='PassWorld' autoComplete="off" ref={props.passwordRef} />
             </div>
-            <div>
+            <div className="mt-1 mb-4 text-center">
                 <button class="button" type="submit" name="login"><span>Send</span></button>
             </div>
         </form></>
