@@ -6,7 +6,7 @@ import './Login.css'
 
 function FormLogin(props) {
     return (
-        <><h1 class="titre">Login In </h1>
+        <><h1 class="titre">Login  </h1>
         <form onSubmit={props.onSignin}>
             <div class="email">
                 <label class="user">Username:</label>
