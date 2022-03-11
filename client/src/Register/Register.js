@@ -2,13 +2,16 @@ import React from 'react';
 import axios from "axios";
 import {Link} from 'react-router-dom';
 import {useCookies, withCookies} from 'react-cookie';
-import './Login.css'
+import './Register.css'
 
 function FormLogin(props) {
     return (
-        <><h1 class="titre">Login  </h1>
+        <><h1 class="titre">Register</h1>
         <form onSubmit={props.onSignin}>
             <div class="email">
+                <input class="user" type="text"  placeholder='Email' id="email" autoComplete="off" ref={props.usernameRef} />
+            </div>
+            <div class="mail">
                 <input class="user" type="text"  placeholder='Username' id="username" autoComplete="off" ref={props.usernameRef} />
             </div>
             <div class="mdp">
@@ -84,15 +87,7 @@ function LocalProtectedRoute({children, ...rest}) {
  */
 function LocalProtectedLink({...rest}) {
     if (rest.allCookies && rest.allCookies.login && rest.allCookies.login.username && rest.allCookies.login.token) {
-        return <Link className={rest.className} to={rest.to}>articles</Link>
-    } else {
-        return null;
-    }
-}
-
-function NotLocalProtectedLink({...rest}) {
-    if (!(rest.allCookies && rest.allCookies.login && rest.allCookies.login.username && rest.allCookies.login.token)) {
-        return <Link className={rest.className} to={rest.to}>{rest.children}</Link>
+        return <Link className={rest.className} to={rest.to}>cities</Link>
     } else {
         return null;
     }
@@ -100,7 +95,6 @@ function NotLocalProtectedLink({...rest}) {
 
 const ProtectedRoute = withCookies(LocalProtectedRoute);
 const ProtectedLink = withCookies(LocalProtectedLink);
-const NotProtectedLink = withCookies(NotLocalProtectedLink);
 
-export {ProtectedRoute, ProtectedLink,NotProtectedLink};
+export {ProtectedRoute, ProtectedLink};
 export default Login;
