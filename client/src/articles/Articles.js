@@ -43,22 +43,21 @@ export default function Articles() {
     }
     return (
        <>
-        <h1>
-            Articles !!
-        </h1>
+     
 
-        <input
+        <input 
                         type="text"
-                        class="searchTerm"
+                        class="searchTerm searchbar"
                         placeholder="Search..."
                         onChange={handleTextSearch} />
-
+<div className='articles_list'>
           {data.map( x =>  <article key={x.id}>
                               <h1 className="Article_title">{x.title}</h1>
                               <section dangerouslySetInnerHTML={{__html: x.content}}></section>
                               {displayMedia(x.mediaType,x.thumbnailURL)}
                            </article>
            )}
+           </div>
       </>
     );
 }
