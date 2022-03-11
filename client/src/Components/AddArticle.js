@@ -1,5 +1,6 @@
 import React, {Component} from "react"
 import axios from "axios"
+import './AddArticle.css';
 
 export default class AddArticle extends Component
 {
@@ -74,39 +75,59 @@ export default class AddArticle extends Component
     {
         return(
             <div>
+                <h1 class="titre">AddArticle</h1>
                 <form>
-                <input type = "text"
+                <div class="article1">
+                <input class="name"
+                       type = "text"
                        name="title"
                        placeholder="Add A New Article"
                        ref = {(input) => { this.inputToFocus = input }}
                        value={this.state.title} 
                        onChange={this.handleChange}
                 /><br/>
-                <input type = "text"
+                </div>
+                <div class="article2">
+                <input 
+                class="name"
+                type = "text"
                        name="content"
                        placeholder="Add Content"
                        value={this.state.content} 
                        onChange={this.handleChange}
                 /><br/>
-                <input type = "text"
+                </div>
+                <div class="article3">
+                <input 
+                class="name"
+                type = "text"
                        name="thumbnailUrl"
                        placeholder="Add A thumbnail"
                        value={this.state.thumbnailUrl} 
                        onChange={this.handleChange}
                 /><br/>
-                <input type = "text"
+                </div>
+                <div class="article4">
+                <input 
+                class="name"
+                type = "text"
                        name="mediaType"
                        placeholder="Add A mediaType"
                        value={this.state.mediaType} 
                        onChange={this.handleChange}
                 /><br/>
-                <input type = "text"
+                </div>
+                <div class="article5">
+                <input 
+                class="name"
+                type = "text"
                        name="mediaUrl"
                        placeholder="Add MediaUrl"
                        value={this.state.mediaUrl} 
                        onChange={this.handleChange}
                 /><br/>
-                <button onClick={this.handleSubmit}>Submit</button>
+                </div>
+                <button  class="button" onClick={this.handleSubmit}><span>Submit</span></button>
                 </form>
             </div>
         )
