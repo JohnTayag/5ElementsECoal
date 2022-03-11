@@ -17,7 +17,7 @@ function FormLogin(props) {
                 <input class="pass" type="password" name="password" autoComplete="off" ref={props.passwordRef} />
             </div>
             <div>
-                <button class="button" type="submit" name="login">Login</button>
+                <button class="button" type="submit" name="login"><span>Login</span></button>
                 <button type="button" name="signup" onClick={props.onSignup}>
                     Sign up
                 </button>
