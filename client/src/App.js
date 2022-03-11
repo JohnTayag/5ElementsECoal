@@ -9,15 +9,43 @@ import AddArticle from "./Components/AddArticle";
 
 
 function App() {
+  function toggleMenu() {
+    const menu = document.querySelector(".menu");
+    const menuItems = document.querySelectorAll(".menuItem");
+    const hamburger= document.querySelector(".hamburger");
+    const closeIcon= document.querySelector(".closeIcon");
+    const menuIcon = document.querySelector(".menuIcon");
+    
+    
+
+    if (menu.classList.contains("showMenu")) {
+      menu.classList.remove("showMenu");
+      closeIcon.style.display = "none";
+      menuIcon.style.display = "block";
+    } else {
+      menu.classList.add("showMenu");
+      closeIcon.style.display = "block";
+      menuIcon.style.display = "none";
+    }
+  } 
+
   return (
     <>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
     <nav>
-      <Link to="/">Home</Link>
-      <Link to="/articles">Article</Link>
-      <Link to="/Login">Login</Link>
-      <Link to="/Register">Register</Link>
-      <Link to="/AddArticle">AddArticle</Link>
+    <ul className="menu">
+    <li> <Link className="menuItem" onClick={toggleMenu} to="/">Home</Link></li>
+    <li> <Link className="menuItem" onClick={toggleMenu} to="/articles">News</Link></li>
+    <li> <Link className="menuItem" onClick={toggleMenu} to="/Login">Login</Link></li>
+    <li> <Link className="menuItem" onClick={toggleMenu} to="/Register">Register</Link></li>
+    <li> <Link className="menuItem" onClick={toggleMenu} to="/AddArticle">AddArticle</Link></li>
+      </ul>
+      <button className="hamburger" onClick={toggleMenu}> 
+        <i class="menuIcon material-icons">menu</i>
+        <i class="closeIcon material-icons">close</i>
+      </button>
     </nav>
+<img className="logo_Team" src="/logo_5_elements.png"/>
 
       <Routes>
         <Route exact={true} path="/" element={<Home/>}/>
