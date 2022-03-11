@@ -2,13 +2,16 @@ import React from 'react';
 import axios from "axios";
 import {Link} from 'react-router-dom';
 import {useCookies, withCookies} from 'react-cookie';
-import './Login.css'
+import './Register.css'
 
 function FormLogin(props) {
     return (
-        <><h1 class="titre">Login In </h1>
+        <><h1 class="titre">Register</h1>
         <form onSubmit={props.onSignin}>
             <div class="email">
+                <input class="user" type="text"  placeholder='Email' id="email" autoComplete="off" ref={props.usernameRef} />
+            </div>
+            <div class="mail">
                 <input class="user" type="text"  placeholder='Username' id="username" autoComplete="off" ref={props.usernameRef} />
             </div>
             <div class="mdp">
