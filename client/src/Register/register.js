@@ -3,27 +3,26 @@ import axios from "axios";
 import { Link } from 'react-router-dom';
 import { useCookies, withCookies } from 'react-cookie';
 import { useNavigate } from "react-router-dom";
+import './Register.css';
 
 function FormSignup(props) {
 
 
     return (
         <div className='container border border-secondary mt-5 pt-3'>
+            <h1 class="titre">Register</h1>
             <form onSubmit={props.onSignup}>
-                <div className="mt-1 mb-4">
-                    <label className="form-label">Username:</label>
-                    <input className="form-control" type="text" id="username" autoComplete="off" ref={props.usernameRef} />
+                <div className="mt-1 mb-4 email">
+                    <input className="form-control user" placeholder='UserName' type="text" id="username" autoComplete="off" ref={props.usernameRef} />
                 </div>
-                <div className="mt-1 mb-4">
-                    <label className="form-label">Password:</label>
-                    <input className="form-control" type="password" name="password" autoComplete="off" ref={props.passwordRef} />
+                <div className="mt-1 mb-4 mdp">
+                    <input className="form-control pass" placeholder='PassWord' type="password" name="password" autoComplete="off" ref={props.passwordRef} />
                 </div>
-                <div className="mt-1 mb-4">
-                    <label className="form-label">Email:</label>
-                    <input className="form-control" type="email" name="email" required="on" ref={props.emailRef} />
+                <div className="mt-1 mb-4 mail">
+                    <input className="form-control user" placeholder='Email' type="email" name="email" required="on" ref={props.emailRef} />
                 </div>
                 <div className="mt-1 mb-4 text-center">
-                    <button className="btn btn-dark" type="submit" name="signup">Sign Up</button>
+                    <button className="btn btn-dark button" type="submit" name="signup">Sign Up</button>
                 </div>
             </form>
         </div>
