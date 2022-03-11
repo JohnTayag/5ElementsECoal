@@ -61,13 +61,13 @@ function sendToken(req, res) {
 // sinon : retourner un code d'erreur au client
 function verify(req, res, next) {
     if (!req.headers || !req.headers.authorization) {
-        console.log('header non conforme :', req.headers);
+        console.log('header is not improper:', req.headers);
         res.status(401).end();
         return;
     }
     const auth = req.headers.authorization.split(' ');
     if (auth.length !== 2 || auth[0] !== 'Bearer') {
-        console.log('headers.authorization non conforme : ', auth);
+        console.log('headers.authorization not improper : ', auth);
         res.status(401).end();
         return;
     }
@@ -91,7 +91,7 @@ router
     .post("/signin", checkBodyUser, (req, res, next) => {
         checkUserPassword(req.body, res, next)
     }, sendToken)
-    .post("/signUp", checkBodyUser, (req, res) => {
+    .post("/signup", checkBodyUser, (req, res) => {
         console.log("signup....");
         db.get(
             'select 1 from users where username=?', req.body.username,
@@ -105,7 +105,7 @@ router
                         res.status(403).end();
                     } else {
                         console.log("ok pour création : ", req.body.username);
-                        db.run('insert into users(username,password) values(?,?)', [req.body.username, req.body.password],
+                        db.run('INSERT INTO users(username,password,email) VALUES (?,?,?)', [req.body.username, req.body.password, req.body.email],
                             (err) => {
                                 if (err) {
                                     console.log("err :: ", err);

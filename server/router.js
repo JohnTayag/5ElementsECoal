@@ -7,8 +7,8 @@ const db = new sqlite3.Database('data/eCoalDB.db');
 const verify=require('./connectionRouter').verify;
 
 router
-    .get("/cities", verify, (req, res) => {
-        db.all('select * from city',
+    .get("/Articles", verify, (req, res) => {
+        db.all('select * from article',
             (err, rows) => {
                 if (err) {
                     console.log("err : ", err);

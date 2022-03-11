@@ -4,7 +4,7 @@ import {useCookies} from 'react-cookie';
 
 export default function Home() {
     const [cookies] = useCookies(['login']);
-    const msg = cookies.login && cookies.login.username ? "connection OK" : "no connection";
+    const msg = cookies.login && cookies.login.username ? "Connected in your account" : "Not connected ";
     
     return (
         <>

@@ -6,7 +6,7 @@ import './Login.css'
 
 function FormLogin(props) {
     return (
-        <><h1 class="titre">Login In </h1>
+        <><h1 class="titre">Login  </h1>
         <form onSubmit={props.onSignin}>
             <div class="email">
                 <input class="user" type="text"  placeholder='Username' id="username" autoComplete="off" ref={props.usernameRef} />
@@ -84,7 +84,15 @@ function LocalProtectedRoute({children, ...rest}) {
  */
 function LocalProtectedLink({...rest}) {
     if (rest.allCookies && rest.allCookies.login && rest.allCookies.login.username && rest.allCookies.login.token) {
-        return <Link className={rest.className} to={rest.to}>cities</Link>
+        return <Link className={rest.className} to={rest.to}>articles</Link>
+    } else {
+        return null;
+    }
+}
+
+function NotLocalProtectedLink({...rest}) {
+    if (!(rest.allCookies && rest.allCookies.login && rest.allCookies.login.username && rest.allCookies.login.token)) {
+        return <Link className={rest.className} to={rest.to}>{rest.children}</Link>
     } else {
         return null;
     }
@@ -92,6 +100,7 @@ function LocalProtectedLink({...rest}) {
 
 const ProtectedRoute = withCookies(LocalProtectedRoute);
 const ProtectedLink = withCookies(LocalProtectedLink);
+const NotProtectedLink = withCookies(NotLocalProtectedLink);
 
-export {ProtectedRoute, ProtectedLink};
+export {ProtectedRoute, ProtectedLink,NotProtectedLink};
 export default Login;
