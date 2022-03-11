@@ -1,7 +1,18 @@
 
 .Article_title {
   color: #CCAD8F;
+
+  font-size: 3rem;
+
+}
+img{
+  width: 400px;
+  height: 300px;
+  text-align: center;
+
+
   font-size: 1.5rem;
+
 }
 
 .searchbar{
