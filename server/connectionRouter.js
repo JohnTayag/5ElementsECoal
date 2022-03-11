@@ -91,7 +91,7 @@ router
     .post("/signin", checkBodyUser, (req, res, next) => {
         checkUserPassword(req.body, res, next)
     }, sendToken)
-    .post("/signUp", checkBodyUser, (req, res) => {
+    .post("/signup", checkBodyUser, (req, res) => {
         console.log("signup....");
         db.get(
             'select 1 from users where username=?', req.body.username,
@@ -105,7 +105,7 @@ router
                         res.status(403).end();
                     } else {
                         console.log("ok pour création : ", req.body.username);
-                        db.run('insert into users(username,password) values(?,?)', [req.body.username, req.body.password],
+                        db.run('INSERT INTO users(username,password,email) VALUES (?,?,?)', [req.body.username, req.body.password, req.body.email],
                             (err) => {
                                 if (err) {
                                     console.log("err :: ", err);
