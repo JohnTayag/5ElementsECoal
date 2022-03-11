@@ -13,10 +13,11 @@ let db = new sqlite3.Database('./data/ecoalDB.db', sqlite3.OPEN_READWRITE | sqli
 
 
 let query = [
+
 "PRAGMA foreign_keys = ON",
+"DROP TABLE IF EXISTS article_tag",
 "DROP TABLE IF EXISTS article",
 "DROP TABLE IF EXISTS tag",
-"DROP TABLE IF EXISTS article_tag",
 "CREATE TABLE article (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT NOT NULL, content TEXT NOT NULL, thumbnailURL TEXT, mediaType TEXT, mediaURL TEXT, leadStory INTEGER)",
 "CREATE TABLE tag (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL)",
 "CREATE TABLE users (id INTEGER PRIMARY KEY AUTOINCREMENT, username varchar, password varchar, email varchar)",

@@ -122,7 +122,10 @@ router
 
             }
         )
-    });
+    })
+
+    
+    ;
 
 module.exports.verify=verify;
 module.exports.router=router;

@@ -1,6 +1,7 @@
 
 .Article_title {
   color: #CCAD8F;
+<<<<<<< HEAD
   font-size: 3rem;
 
 }
@@ -9,4 +10,21 @@ img{
   height: 300px;
   text-align: center;
 
+=======
+  font-size: 1.5rem;
+>>>>>>> 24c115c4d39c6e11b057ae535cdfdae51fd1a722
+}
+
+.searchbar{
+  width: 67vw;
+    height: 5vh;
+    border-radius: 4px;
+    border: none;
+    background-color: #F4F4F5;
+    margin: 14vh 12vw 0vh;
+}
+.articles_list img {
+  max-width: 100%;
+    width: 50vw;
+    margin-left: 22vw;
 }
