@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from 'react-router-dom';
 import { useCookies, withCookies } from 'react-cookie';
 import { useNavigate } from "react-router-dom";
+import './Register.css'
 
 function FormSignup(props) {
 

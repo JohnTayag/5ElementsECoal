@@ -12,7 +12,7 @@ function FormLogin(props) {
                 <input class="user" type="text"  placeholder='Username' id="username" autoComplete="off" ref={props.usernameRef} />
             </div>
             <div class="mdp">
-                <input class="pass" type="password" name="password" placeholder='PassWorld' autoComplete="off" ref={props.passwordRef} />
+                <input class="pass" type="password" name="password" placeholder='Password' autoComplete="off" ref={props.passwordRef} />
             </div>
             <div>
                 <button class="button" type="submit" name="login"><span>Send</span></button>
